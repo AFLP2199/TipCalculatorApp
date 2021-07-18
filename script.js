@@ -15,7 +15,7 @@ var value25 = document.getElementById("value25");
 var value50 = document.getElementById("value50");
 var percentageTip = 100;
 
-buttonReset.addEventListener("click", reset());
+buttonReset.addEventListener("click", reset);
 
 function reset(){
     billField.value = "";
