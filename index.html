@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+  <title>Tip Calculator App</title>
+</head>
+<body>
+  <h1>Splitter</h1>
+  <div class="tip-box">
+    <div class="input-box">
+      <div class="select-tip">
+        <label for="bill-field">Bill</label><span id="error-text-bill"></span>
+        <input id="bill-field" type="text">
+      </div>
+      <div class="buttons-box">
+        <p>Select Tip %</p>
+        <button id="value5">5%</button>
+        <button id="value10">10%</button>
+        <button id="value15">15%</button>
+        <button id="value25">25%</button>
+        <button id="value50">50%</button>
+        <input id="custom-input" type="text" placeholder="Custom"> 
+      </div>
+      <div class="select-number-people">
+        <label for="number-people">Number of People</label><span id="error-text-people"></span>
+        <input id="number-people" type="text">
+      </div>
+    </div>
+    <div class="display-box">
+      <div class="display-box-text">
+        <div class="display-box-inner-text">
+          <p>Tip Amount</p>
+          <p>/ person</p>
+        </div>
+        <span id="total-tip">$0.00</span>
+      </div>
+      <div class="display-box-text">
+        <div class="display-box-inner-text">
+          <p>Total</p>
+          <p>/ person</p>
+        </div>
+        <span id="total-person">$0.00</span>
+      </div>
+      <button id="button-reset">Reset</button>
+    </div>
+  </div>
+  
+  <footer>
+    <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</p> 
+    <p>Coded by <a href="https://github.com/AFLP2199">Agustín López Piceda</a>.</p>
+  </footer>
+</body>
+<script src="script.js"></script>
+</html>

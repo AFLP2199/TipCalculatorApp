@@ -1,0 +1,339 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Space Mono', monospace;
+  background-color: #c5e4e7;
+  margin: 0 0 200px;
+}
+
+h1 {
+  display: block;
+  margin: 75px auto;
+  color: #5e7a7d;
+  font-size: 24px;
+  font-weight: 700;
+  width: 100px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  word-break: break-all;
+}
+
+.tip-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 25px auto;
+  background-color: white;
+  width: 1000px;
+  padding: 25px;
+  border-radius: 20px;
+}
+
+.input-box {
+  width: 450px;
+  height: 100%;
+  margin: 10px auto;
+}
+
+.input-box label, .input-box p {
+  display: block;
+  margin: 5px auto;
+  color: #5e7a7d;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.input-box p {
+  width: 100% !important;
+}
+
+.input-box #bill-field, .input-box #number-people {
+  font-family: 'Space Mono', monospace;
+  display: block;
+  background-color: #f4fafa;
+  width: 100%;
+  margin: 5px auto;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: right;
+  color: #00494d;
+  height: 50px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border: 2px solid #f4fafa;
+}
+
+.input-box #bill-field:focus {
+  border: 2px solid #26c0ab;
+}
+
+.input-box #number-people:focus {
+  border: 2px solid #fd6a35;
+}
+
+.buttons-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 35px auto;
+}
+
+.buttons-box button {
+  width: 125px;
+  font-family: 'Space Mono', monospace;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  border: none;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #00494d;
+  color: white;
+  cursor: pointer;
+}
+
+.buttons-box button:hover {
+  background-color: #61ead8;
+  color: #00494d;
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+}
+
+.buttons-box button:focus {
+  background-color: #26c0ab;
+  color: #00494d;
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+}
+
+.buttons-box input {
+  display: none;
+}
+
+.buttons-box #custom-input {
+  display: block;
+  background-color: #f4fafa;
+  color: #00494d;
+  width: 125px;
+  height: 55px;
+  margin: 5px;
+  font-family: 'Space Mono', monospace;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.buttons-box input:focus {
+  border: 2px solid #26c0ab;
+}
+
+::-webkit-input-placeholder {
+  color: #5e7a7d;
+}
+
+:-ms-input-placeholder {
+  color: #5e7a7d;
+}
+
+::-ms-input-placeholder {
+  color: #5e7a7d;
+}
+
+::placeholder {
+  color: #5e7a7d;
+}
+
+.select-number-people label, .select-tip label {
+  display: inline;
+}
+
+.select-number-people span, .select-tip span {
+  color: #fd6a35;
+  float: right;
+}
+
+.display-box {
+  width: 450px;
+  background-color: #00494d;
+  height: 100%;
+  border-radius: 20px;
+  margin: 10px auto;
+}
+
+.display-box button {
+  font-family: 'Space Mono', monospace;
+  display: block;
+  margin: 65px auto;
+  width: 85%;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  background-color: #26c0ab;
+  color: #00494d;
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.display-box button:hover {
+  background-color: #61ead8;
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+}
+
+.display-box-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 10px;
+  width: 85%;
+  margin: 15px auto;
+}
+
+.display-box-text p {
+  text-align: left;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 5px;
+  color: white;
+}
+
+.display-box-text p:nth-child(2) {
+  color: #7f9c9f;
+}
+
+.display-box-text span {
+  color: #26c0ab;
+  font-size: 50px;
+  font-weight: 700;
+  padding: 5px;
+  text-align: right;
+  word-break: break-all;
+}
+
+.display-box-inner-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0px;
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  padding: 10px;
+  width: 100%;
+  background-color: #00494d;
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+}
+
+footer a {
+  color: #26c0ab;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #fd6a35;
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+}
+
+footer p {
+  font-size: 18px;
+  margin: 5px;
+}
+
+@media screen and (max-width: 1024px) {
+  .tip-box {
+    width: 500px;
+  }
+  .display-box-text {
+    width: 95%;
+  }
+  .display-box-text p {
+    font-size: 14px;
+  }
+  .display-box-text span {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .tip-box {
+    width: 95%;
+  }
+  .display-box-text p {
+    font-size: 14px;
+  }
+  .display-box-text span {
+    font-size: 30px;
+  }
+  footer p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .buttons-box button, .buttons-box #custom-input {
+    width: 45%;
+    font-size: 20px;
+  }
+  .display-box-text p {
+    font-size: 12px;
+  }
+  .display-box-text span {
+    font-size: 24px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
