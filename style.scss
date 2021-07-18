@@ -78,6 +78,7 @@ h1{
         border: none;
         cursor: pointer;
         padding: 10px;
+        padding-left: 40px;
         border: 2px solid $Light-grayish-cyan-2;
     }
     #bill-field:focus{
@@ -143,6 +144,25 @@ h1{
 
 ::placeholder{
     color: $Dark-grayish-cyan;
+}
+#dollar-icon, #person-icon{
+    display: block;
+    position: relative;
+}
+  
+#dollar-icon img{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 20px;
+    z-index: 1;
+}
+#person-icon img {
+    position: absolute;
+    top: 13px;
+    left: 10px;
+    width: 20px;
+    z-index: 1;
 }
 .select-number-people, .select-tip{
     label{
@@ -286,3 +306,4 @@ footer{
         }
     }
 }
+
