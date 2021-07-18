@@ -13,9 +13,10 @@ var value10 = document.getElementById("value10");
 var value15 = document.getElementById("value15");
 var value25 = document.getElementById("value25");
 var value50 = document.getElementById("value50");
-var percentageTip = 100;
+var valueCustom = document.getElementById("custom-input");
+var percentageTip = 0;
 
-buttonReset.addEventListener("click", reset());
+buttonReset.addEventListener("click", reset);
 
 function reset(){
     billField.value = "";
@@ -29,7 +30,6 @@ values.forEach(i => clickButtonTip(i));
 
 function clickButtonTip(i){
     window["value" + i].addEventListener("click", function(){
-        console.log(i);
         percentageTip = i;
         totalTip.innerHTML = "$" + (parseFloat(billField.value*(percentageTip/100))/parseInt(numberPerson.value)).toFixed(2);
         total = ((parseFloat(billField.value*(percentageTip/100)) / parseInt(numberPerson.value)) + (billField.value/numberPerson.value)).toFixed(2); 
@@ -40,10 +40,26 @@ function clickButtonTip(i){
     });
 }
 
+function clickCustomButton(){
+        percentageTip = parseInt(valueCustom.value);
+        totalTip.innerHTML = "$" + (parseFloat(billField.value*(percentageTip/100))/parseInt(numberPerson.value)).toFixed(2);
+        total = ((parseFloat(billField.value*(percentageTip/100)) / parseInt(numberPerson.value)) + (billField.value/numberPerson.value)).toFixed(2); 
+        totalPerson.innerHTML = "$" + total;
+        if(isNaN(total)){
+            totalTip.innerHTML = "$0.00";
+            totalPerson.innerHTML = "$0.00";
+        }
+        if(isNaN(valueCustom.value)){
+            valueCustom.value = "";
+        }
+}
+
+valueCustom.addEventListener("click", clickCustomButton);
+valueCustom.addEventListener("change", clickCustomButton);
+
 billField.addEventListener("change", function calculateTip(){
     totalTip.innerHTML = "$" + (parseFloat(billField.value*(percentageTip/100))/parseInt(numberPerson.value)).toFixed(2);
     total = ((parseFloat(billField.value*(percentageTip/100)) / parseInt(numberPerson.value)) + (billField.value/numberPerson.value)).toFixed(2); 
-    console.log(percentageTip);
     if(isNaN(total)){
         totalTip.innerHTML = "$0.00";
         totalPerson.innerHTML = "$0.00";
@@ -63,7 +79,7 @@ billField.addEventListener("change", function calculateTip(){
     }
 });
 
-numberPerson.addEventListener("change", function calculateTip(){
+numberPerson.addEventListener("change", function calculateTotal(){
     totalTip.innerHTML = "$" + (parseFloat(billField.value*(percentageTip/100))/parseInt(numberPerson.value)).toFixed(2);
     total = ((parseFloat(billField.value*(percentageTip/100)) / parseInt(numberPerson.value)) + (billField.value/numberPerson.value)).toFixed(2); 
     if(isNaN(total)){
