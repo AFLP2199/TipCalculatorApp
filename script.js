@@ -35,7 +35,8 @@ function clickButtonTip(i){
         total = ((parseFloat(billField.value*(percentageTip/100)) / parseInt(numberPerson.value)) + (billField.value/numberPerson.value)).toFixed(2); 
         totalPerson.innerHTML = "$" + total;
         if(isNaN(total)){
-            reset()
+            totalTip.innerHTML = "$0.00";
+            totalPerson.innerHTML = "$0.00";
         }
     });
 }
